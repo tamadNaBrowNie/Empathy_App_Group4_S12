@@ -1,0 +1,1 @@
+ C:\\Users\\kevin\\StudioProjects\\pomodoro_try\\.dart_tool\\flutter_build\\4a38f0c6fbf38ac845e3d66cea896f5a\\native_assets.yaml: 
