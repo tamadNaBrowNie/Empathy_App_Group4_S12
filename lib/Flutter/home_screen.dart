@@ -216,9 +216,10 @@ class _HomeScreenState extends State<HomeScreen>
         return sum;
       }
     });
+    int conc = tasks.fold(0,(sum,task)=>sum+= task.isActive? 1:0);
     setState(() {
       pomodoroMinutes = totalMinutes;
-      if (totalMinutes >= 30) {
+      if (totalMinutes >= 30 || conc>2) {
         showDialog(
           context: context,
           builder: (BuildContext context) {
