@@ -25,9 +25,9 @@ class _TaskManagerTabState extends State<TaskManagerTab> {
 
     //Alerts when there are tasks that are left undone
     _checkWeeklyTasks();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      widget.addNotification(DateTime.now(), "You opened the Task Journal!");
-    });
+    //WidgetsBinding.instance.addPostFrameCallback((_) {
+      //widget.addNotification(DateTime.now(), "You opened the Task Journal!");
+    //});
   }
 
   Future<void> _initSharedPreferences() async {

@@ -25,9 +25,9 @@ class _MiniJournalTabState extends State<MiniJournalTab> {
     _initSharedPreferences();
     _checkWeeklyJournals();
     // Add a notification when the Mini Journal tab loads
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      widget.addNotification(DateTime.now(), "You opened the Mini Journal!");
-    });
+    //WidgetsBinding.instance.addPostFrameCallback((_) {
+      //widget.addNotification(DateTime.now(), "You opened the Mini Journal!");
+    //});
   }
 
 
@@ -53,7 +53,7 @@ class _MiniJournalTabState extends State<MiniJournalTab> {
       final Journal_currentTime = DateTime.now().millisecondsSinceEpoch;
 
       // If 5 seconds have passed since the last notification, show the notification
-      if (Journal_currentTime - Journal_lastNotificationTime >= Duration(days: 7).inMilliseconds) {
+      if (Journal_currentTime - Journal_lastNotificationTime >= Duration(seconds: 5).inMilliseconds) {
         // print("Passed 5 seconds");
         await _prefs.setInt('last_notification_time', Journal_currentTime);
         _notifyJournal();
